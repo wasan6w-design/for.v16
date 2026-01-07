@@ -7,24 +7,42 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <html>
   <body>
   
-    <h2>My CD Collection</h2>
-    <table border="1">
+    <h2>Tranees List</h2>
+	
+    <table border="3">
       <tr bgcolor="#9acd32">
         <th>Name</th>
         <th>Email</th>
-		  <th>Course</th>
-		  <th>Action</th>
+		<th>Course</th>
+		<th>Action</th>
       </tr>
 	  
-      <xsl:for-each select="catalog/cd">
+      <xsl:for-each select="Trainees1/Trainer">
         <tr>
-          <td><xsl:value-of select="title"/></td>
-          <td><xsl:value-of select="artist"/></td>
-        </tr>
-      </xsl:for-each>
-    </table>
+          <td><xsl:value-of select="Name"/></td>
+          <td><xsl:value-of select="Email"/></td>
+		  <td><xsl:value-of select="Course"/></td>
+       
+		
+		
+		<td>
+			 <form method="post" action="delete.php">
+			<input type="hidden" name="index" value="{position()-1}"/>
+			<input type="submit" value="Delete"/>
+			</form>
+		 </td>
+		</tr>
+		</xsl:for-each>
+		</table>
+		
+	  <h3>Add New Trainee</h3>
+		<form method="post" action="insert.php">
+		<input type="text" name="name"/>
+		<input type="email" name="email"/>
+		<input type="text" name="course"/>
+		<input type="submit" value="Add"/>
+		</form>
   </body>
   </html>
 </xsl:template>
-
 </xsl:stylesheet>
