@@ -11,17 +11,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
     <table border="1">
       <tr bgcolor="#9acd32">
-        <th>Name</th>
-        <th>Email</th>
-		<th>Course</th>
-		<th>Action</th>
+        <th>name</th>
+        <th>email</th>
+		<th>course</th>
+		<th>action</th>
       </tr>
 	  
       <xsl:for-each select="tariner_List/tariner">
         <tr>
-          <td><xsl:value-of select="Name"/></td>
-          <td><xsl:value-of select="Email"/></td>
-		  <td><xsl:value-of select="Course"/></td>
+          <td><xsl:value-of select="name"/></td>
+          <td><xsl:value-of select="email"/></td>
+		  <td><xsl:value-of select="course"/></td>
        
 		
 		
