@@ -9,7 +9,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
     <h2>Tranees List</h2>
 	
-    <table border="3">
+    <table border="1">
       <tr bgcolor="#9acd32">
         <th>Name</th>
         <th>Email</th>
@@ -17,7 +17,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<th>Action</th>
       </tr>
 	  
-      <xsl:for-each select="Trainees1/Trainer">
+      <xsl:for-each select="tariner_List/tariner">
         <tr>
           <td><xsl:value-of select="Name"/></td>
           <td><xsl:value-of select="Email"/></td>
